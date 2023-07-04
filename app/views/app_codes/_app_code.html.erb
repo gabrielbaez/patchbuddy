@@ -5,4 +5,6 @@
     <td class="d-none d-xl-table-cell"><%= app_code.manager %></td>
     <td class="d-none d-xl-table-cell"> <%= app_code.manager_email %></td>
     <td class="d-none d-md-table-cell"> <%= app_code.support_email %></td>
+    <td class="d-none d-md-table-cell"><%= link_to "Edit", edit_app_code_path(app_code), class: "btn  btn-primary" %>  |  <%= link_to "Delete", app_code, method: :delete , class: "btn  btn-primary"%></td>
+
   </tr>

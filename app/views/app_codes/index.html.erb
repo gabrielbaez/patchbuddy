@@ -12,7 +12,7 @@
         <div class="card">
           <div class="card-header">
             <h5 class="card-title mb-0">List of Application Codes</h5>
-
+            <%= link_to "New app code", new_app_code_path %>
             <div id="app_codes">
 
               <table class="table table-hover my-0">
@@ -23,20 +23,18 @@
                   <th class="d-none d-xl-table-cell">Manager</th>
                   <th class="d-none d-md-table-cell">Manager Email</th>
                   <th class="d-none d-md-table-cell">Support Email</th>
+                  <th class="d-none d-md-table-cell">Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <% @app_codes.each do |app_code| %>
                   <%= render app_code %>
-                  <p>
-                    <%= link_to "Show this app code", app_code %>
-                  </p>
                 <% end %>
                 </tbody>
               </table>
             </div>
 
-            <%= link_to "New app code", new_app_code_path %>
+
           </div>
           <div class="card-body">
           </div>
