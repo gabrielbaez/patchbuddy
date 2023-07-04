@@ -1,0 +1,2 @@
+module AppCodeHelper
+end

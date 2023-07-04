@@ -15,12 +15,16 @@
 </head>
 
 <body>
+<div class="wrapper">
 
-<%= yield :leftmenu %>
-
+  <%= render "layouts/leftmenu" %>
+  <div class="main">
+    <%= render "layouts/topmenu" %>
 <%= render "layouts/alerts" %>
 <%= yield %>
-
+  <%= yield :footer %>
+</div>
+</div>
 
 
 </body>

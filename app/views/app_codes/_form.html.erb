@@ -1,0 +1,42 @@
+<%= form_with(model: app_code) do |form| %>
+  <% if app_code.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(app_code.errors.count, "error") %> prohibited this app_code from being saved:</h2>
+
+      <ul>
+        <% app_code.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :manager, style: "display: block" %>
+    <%= form.text_field :manager %>
+  </div>
+
+  <div>
+    <%= form.label :manager_email, style: "display: block" %>
+    <%= form.text_field :manager_email %>
+  </div>
+
+  <div>
+    <%= form.label :support_email, style: "display: block" %>
+    <%= form.text_field :support_email %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
