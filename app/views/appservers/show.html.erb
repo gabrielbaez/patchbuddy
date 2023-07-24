@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @appserver %>
+
+<div>
+  <%= link_to "Edit this appserver", edit_appserver_path(@appserver) %> |
+  <%= link_to "Back to appservers", appservers_path %>
+
+  <%= button_to "Destroy this appserver", @appserver, method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @environment %>
+
+<div>
+  <%= link_to "Edit this environment", edit_environment_path(@environment) %> |
+  <%= link_to "Back to environments", environments_path %>
+
+  <%= button_to "Destroy this environment", @environment, method: :delete %>
+</div>

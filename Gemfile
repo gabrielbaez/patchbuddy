@@ -31,6 +31,8 @@ gem "cssbundling-rails"
 gem "jbuilder"
 #authenticator devide
 gem "devise"
+#Gem for Avatars
+gem 'gravtastic'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

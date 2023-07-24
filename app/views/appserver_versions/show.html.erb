@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @appserver_version %>
+
+<div>
+  <%= link_to "Edit this appserver version", edit_appserver_version_path(@appserver_version) %> |
+  <%= link_to "Back to appserver versions", appserver_versions_path %>
+
+  <%= button_to "Destroy this appserver version", @appserver_version, method: :delete %>
+</div>

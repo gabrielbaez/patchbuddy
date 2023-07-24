@@ -11,37 +11,16 @@
       </li>
 
       <li class="sidebar-item active">
-        <a class="sidebar-link" href="index.html">
-          <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
-        </a>
+        <i class="align-middle" data-feather="square"></i> <span class="align-middle"><%= link_to "Dashboard", home_index_path, class: 'sidebar-link'  %></span>
       </li>
 
       <li class="sidebar-item">
-        <a class="sidebar-link" href="pages-profile.html">
-          <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
-        </a>
+        <i class="align-middle" data-feather="square"></i> <span class="align-middle"><%= link_to "Servers", servers_path, class: 'sidebar-link'  %></span>
       </li>
 
-      <li class="sidebar-item">
-        <a class="sidebar-link" href="pages-sign-in.html">
-          <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
-        </a>
-      </li>
-
-      <li class="sidebar-item">
-        <a class="sidebar-link" href="pages-sign-up.html">
-          <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
-        </a>
-      </li>
-
-      <li class="sidebar-item">
-        <a class="sidebar-link" href="pages-blank.html">
-          <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-        </a>
-      </li>
 
       <li class="sidebar-header">
-        Application Management
+        Application Data Management
       </li>
 
       <li class="sidebar-item">
@@ -53,42 +32,37 @@
       </li>
 
       <li class="sidebar-item">
-        <a class="sidebar-link" href="ui-forms.html">
-          <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Operating Systems</span>
-        </a>
+        <i class="align-middle" data-feather="square"></i> <span class="align-middle"><%= link_to "Operating Systems", operatingsystems_path, class: 'sidebar-link'  %></span>
       </li>
 
       <li class="sidebar-item">
-        <a class="sidebar-link" href="ui-cards.html">
-          <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Middleware</span>
-        </a>
+        <i class="align-middle" data-feather="square"></i> <span class="align-middle"><%= link_to "Environments", environments_path, class: 'sidebar-link'  %></span>
       </li>
 
       <li class="sidebar-item">
-        <a class="sidebar-link" href="ui-typography.html">
-          <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
-        </a>
+        <i class="align-middle" data-feather="square"></i> <span class="align-middle"><%= link_to "Application Servers", appservers_path, class: 'sidebar-link'  %></span>
       </li>
 
       <li class="sidebar-item">
-        <a class="sidebar-link" href="icons-feather.html">
-          <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-        </a>
+        <i class="align-middle" data-feather="square"></i> <span class="align-middle"><%= link_to "Application Servers Version", appserver_versions_path, class: 'sidebar-link'  %></span>
+      </li>
+      <li class="sidebar-item">
+        <i class="align-middle" data-feather="square"></i> <span class="align-middle"><%= link_to "Application Status",  appserverstatuses_path, class: 'sidebar-link'  %></span>
       </li>
 
       <li class="sidebar-header">
-        Plugins & Addons
+        Patching Events
       </li>
 
       <li class="sidebar-item">
         <a class="sidebar-link" href="charts-chartjs.html">
-          <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
+          <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Calendar</span>
         </a>
       </li>
 
       <li class="sidebar-item">
         <a class="sidebar-link" href="maps-google.html">
-          <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
+          <i class="align-middle" data-feather="map"></i> <span class="align-middle">Schedule</span>
         </a>
       </li>
     </ul>

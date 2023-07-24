@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @operatingsystem %>
+
+<div>
+  <%= link_to "Edit this operatingsystem", edit_operatingsystem_path(@operatingsystem) %> |
+  <%= link_to "Back to operatingsystems", operatingsystems_path %>
+
+  <%= button_to "Destroy this operatingsystem", @operatingsystem, method: :delete %>
+</div>

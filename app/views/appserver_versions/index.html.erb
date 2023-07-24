@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Appserver versions</h1>
+
+<div id="appserver_versions">
+  <% @appserver_versions.each do |appserver_version| %>
+    <%= render appserver_version %>
+    <p>
+      <%= link_to "Show this appserver version", appserver_version %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New appserver version", new_appserver_version_path %>

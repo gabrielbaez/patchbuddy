@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Operatingsystems</h1>
+
+<div id="operatingsystems">
+  <% @operatingsystems.each do |operatingsystem| %>
+    <%= render operatingsystem %>
+    <p>
+      <%= link_to "Show this operatingsystem", operatingsystem %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New operatingsystem", new_operatingsystem_path %>

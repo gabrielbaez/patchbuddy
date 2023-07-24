@@ -1,0 +1,27 @@
+<%= form_with(model: appserver_version) do |form| %>
+  <% if appserver_version.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(appserver_version.errors.count, "error") %> prohibited this appserver_version from being saved:</h2>
+
+      <ul>
+        <% appserver_version.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :appserver_id, style: "display: block" %>
+    <%= form.select :appserver_id, options_for_select(@appserver.map{ |s| [s.name, s.id] }) %>
+  </div>
+
+  <div>
+    <%= form.label :version, style: "display: block" %>
+    <%= form.text_field :version %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

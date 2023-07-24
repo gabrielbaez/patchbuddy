@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_04_023057) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_11_145358) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,60 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_023057) do
     t.string "support_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "appserver_versions", force: :cascade do |t|
+    t.bigint "appserver_id", null: false
+    t.string "version"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["appserver_id"], name: "index_appserver_versions_on_appserver_id"
+  end
+
+  create_table "appservers", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "appserverstatuses", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "environments", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "operatingsystems", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.date "support_start"
+    t.date "support_end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "servers", force: :cascade do |t|
+    t.string "name"
+    t.bigint "operatingsystem_id", null: false
+    t.bigint "appserver_id", null: false
+    t.bigint "appserver_version_id", null: false
+    t.bigint "environment_id", null: false
+    t.bigint "appserverstatus_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["appserver_id"], name: "index_servers_on_appserver_id"
+    t.index ["appserver_version_id"], name: "index_servers_on_appserver_version_id"
+    t.index ["appserverstatus_id"], name: "index_servers_on_appserverstatus_id"
+    t.index ["environment_id"], name: "index_servers_on_environment_id"
+    t.index ["operatingsystem_id"], name: "index_servers_on_operatingsystem_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,4 +92,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_023057) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "appserver_versions", "appservers"
+  add_foreign_key "servers", "appserver_versions"
+  add_foreign_key "servers", "appservers"
+  add_foreign_key "servers", "appserverstatuses"
+  add_foreign_key "servers", "environments"
+  add_foreign_key "servers", "operatingsystems"
 end

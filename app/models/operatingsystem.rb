@@ -1,0 +1,2 @@
+class Operatingsystem < ApplicationRecord
+end

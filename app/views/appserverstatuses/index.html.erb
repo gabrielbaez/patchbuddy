@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Appserverstatuses</h1>
+
+<div id="appserverstatuses">
+  <% @appserverstatuses.each do |appserverstatus| %>
+    <%= render appserverstatus %>
+    <p>
+      <%= link_to "Show this appserverstatus", appserverstatus %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New appserverstatus", new_appserverstatus_path %>
